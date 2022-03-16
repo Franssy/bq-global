@@ -1,0 +1,93 @@
+@import "./config.scss";
+@import "./mixin.scss";
+@import "./button.scss";
+body {
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $white;
+  @include font(16px, 400, 20px, $pri-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $pri-color;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.hide-on-sm {
+  display: none;
+}
+
+.hide-on-lg {
+  display: block;
+}
+
+.input-field {
+  margin: 1rem 0;
+  input,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    outline: none;
+    border-radius: 5px;
+    border: solid 0.5px $pri-color;
+    margin: 0.5rem 0;
+    transition: 0.5s ease border;
+    &:focus {
+      border: solid 0.5px $black;
+    }
+  }
+}
+
+.routes {
+  margin-top: 78px;
+  min-height: calc(100% - 78px);
+}
+
+@media screen and (min-width: 700px) {
+  .hide-on-lg {
+    display: none;
+  }
+  .hide-on-sm {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .container {
+    width: 1300px !important;
+  }
+}

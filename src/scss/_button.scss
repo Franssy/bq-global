@@ -1,0 +1,30 @@
+%btn {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  display: inline-block;
+  margin: 0.5rem 0;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  transition: all ease 0.25s;
+}
+
+.btn {
+  @extend %btn;
+}
+
+.pri-btn {
+  @extend %btn;
+  color: $white;
+  background: $pri-btn;
+  border: solid 1px $pri-btn;
+  &:hover {
+    color: $pri-btn !important;
+    background: $white;
+  }
+}
+
+.sec-btn {
+  @extend %btn;
+}
